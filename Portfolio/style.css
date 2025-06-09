@@ -1,0 +1,239 @@
+/* RESET + BASE STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f7f9fc;
+  color: #222;
+}
+.dark-mode {
+  background-color: #111;
+  color: #eee;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background: linear-gradient(45deg, #0052d4, #4364f7, #6fb1fc);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.navbar .logo span {
+  color: yellow;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  color: white;
+  font-weight: 500;
+}
+.nav-links button {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 10%;
+  background: url('assets/bg-pattern.png'), linear-gradient(to right, #f0f4ff, #dfe9f3);
+  background-size: cover;
+}
+.hero h1 {
+  font-size: 2.5em;
+}
+.hero p {
+  margin: 15px 0;
+  font-size: 1.1em;
+}
+.buttons .btn {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #4364f7;
+  color: white;
+  font-weight: 500;
+}
+.btn.purple {
+  background-color: #6f42c1;
+}
+
+/* SECTION BASE */
+.section {
+  padding: 60px 10%;
+}
+
+/* ABOUT */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.about-text {
+  flex: 1;
+  min-width: 250px;
+}
+.about-img {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+.about-img img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #0052d4;
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+.skills-grid span {
+  padding: 10px;
+  background: #e0ecff;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 500;
+}
+.dark-mode .skills-grid span {
+  background: #222;
+  color: white;
+}
+
+/* PROJECTS */
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 300px;
+}
+.project-card h3 {
+  margin-bottom: 10px;
+  color: #0052d4;
+}
+.dark-mode .project-card {
+  background: #1e1e1e;
+  color: white;
+}
+
+/* RESUME BUTTON */
+#resume .btn {
+  display: block;
+  margin: auto;
+  padding: 10px 25px;
+  background-color: #0052d4;
+  color: white;
+  border-radius: 5px;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 40px 10%;
+  text-align: center;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.footer h3 {
+  margin-bottom: 10px;
+}
+.footer .social-icons a {
+  margin: 0 10px;
+  color: #eee;
+  font-size: 20px;
+}
+.footer p {
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+/* DARK MODE FOOTER */
+.dark-mode .footer {
+  background-color: #000;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  .resume-container {
+    padding: 20px;
+  }
+
+  header p {
+    font-size: 0.85em;
+    word-break: break-word;
+  }
+
+  .skills {
+    flex-direction: column;
+  }
+
+  .skills li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .project h3 {
+    font-size: 1.1em;
+  }
+
+  .section h2 {
+    font-size: 1.2em;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+}
